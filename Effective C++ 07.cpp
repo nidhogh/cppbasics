@@ -3,7 +3,7 @@ class TimeKeeper
 {
 public:
     TimeKeeper();
-    ~TimeKeeper();
+    virtual ~TimeKeeper();
 };
 
 class AtomicClock : public TimeKeeper
@@ -22,5 +22,5 @@ int main()
 {
     TimeKeeper *ptk = getTimeKeeper(); //从TimeKeeper继承体系获得一个动态分配对象。
     
-    delete ptk; //释放它，避免资源泄露。
+    delete ptk; //释放它，避免资源泄露
 }
